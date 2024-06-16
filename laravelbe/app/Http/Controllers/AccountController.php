@@ -75,7 +75,7 @@ class AccountController extends Controller
         if ($request->has('accessToken')) {
             $accounts = Account::where([
                 'accessToken' => $request->accessToken,
-            ])->select('id','email', 'accessToken') ->get();
+            ])->select('id','email', 'status', 'accessToken') ->get();
             
             return response()->json($accounts);
         }

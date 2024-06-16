@@ -21,3 +21,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::resource('accounts','App\Http\Controllers\AccountController')->except(['create','edit']);
 Route::post('/login', [AccountController::class, 'login']);
+Route::post('/logout', [AccountController::class, 'logout']);

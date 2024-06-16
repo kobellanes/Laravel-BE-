@@ -11,9 +11,6 @@ class Account extends Model
         'email',
         'password',
         'accessToken',
-        'otp',  
-        'otp_expires_at',
-        'otp_used',
     ];
 
     use HasFactory;
